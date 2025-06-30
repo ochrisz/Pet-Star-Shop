@@ -3,9 +3,9 @@
         margin: 0;
     }
     @font-face {
-        font-family: "Roboto";
-        src: url("/font/Roboto-Regular.ttf");
-    }
+            font-family: "Roboto";
+            src: url('font/Roboto-Light.ttf');
+        }
     body{
         font-family: "Roboto";
         /* background-image: url(/imagens/background/foto2.png); */

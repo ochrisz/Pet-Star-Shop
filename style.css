@@ -26,6 +26,8 @@
         flex-wrap: wrap;
         justify-content: center;
         margin-bottom: 150px;
+        font-family: "Roboto";
+        src: url('/font/Roboto-Regular.ttf');
 
     }
 

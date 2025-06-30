@@ -4,7 +4,7 @@
     }
     @font-face {
         font-family: "Roboto";
-        src: url('/font/Roboto-Regular.ttf');
+        src: url("/font/Roboto-Regular.ttf");
     }
     body{
         font-family: "Roboto";
@@ -26,8 +26,6 @@
         flex-wrap: wrap;
         justify-content: center;
         margin-bottom: 150px;
-        font-family: "Roboto";
-        src: url('/font/Roboto-Regular.ttf');
 
     }
 

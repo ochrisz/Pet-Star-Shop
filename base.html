@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Star</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<style> 
+   
+</style>
+
+
+<body>
+    <body>
+    <header>
+        <nav>
+                <div class="imglogo">
+                    <img src="imagens/logo/logo2.png">
+                </div>
+
+                <!--Add menu sanduíche-->
+                <div class="menu-icon" onclick="MostraEscondeMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class="navbar" id="navLinks"> <!--add id para o menu sanduiche-->
+                    <a href="index.html" class="link">Banho e tosa</a>
+                    <a href="produtos.html" class="link">Produtos</a>
+                    <a href="sobrenos.html" class="link ">Sobre nós</a>
+                    <a href="faleconosco.html" class="ultimo-link">Fale Conosco</a>
+                </div>
+        </nav>
+    </header>
+
+    <!--Botões para controlar-->
+    <div class="carousel"> <!-- inicio -->
+
+            <input type="radio" name="carousel" id="slide1" checked> 
+            <input type="radio" name="carousel" id="slide2" >
+            <input type="radio" name="carousel" id="slide3" >
+            <input type="radio" name="carousel" id="slide4" >
+        
+
+        <!-- Slides -->
+        <div class="slides">
+            <div class="slide">
+                <img src="imagens/slides/slide1.jpeg" alt="Slide 1">
+            </div>
+
+            <div class="slide">
+                <img src="imagens/slides/slide2.jpg" alt="Slide 2">
+            </div>
+
+            <div class="slide">
+                <img src="imagens/slides/slide3.webp" alt="Slide 3">
+            </div>
+
+            <div class="slide">
+                <img src="imagens/slides/slide4.jpg" alt="Slide 4">
+            </div>
+        </div>
+
+        <!--Navegação-->
+        <div class="navegacao">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
+
+    </div> <!-- fim -->
+
+    <!-- Carousel Fim-->
+
+    <footer>
+        <p><h3>Pet Star Shop</h3></p>
+        <p><h3>&copy; 2025 Pet Star Group. O melhor lugar para seu bicinho</h2> 
+        <br>
+        <p> Horário de atendiemnto das 8:00 - 18:00</p>
+            <p>Rua Joaquin Carlos Coimbra 178 - Marília SP</p>
+      </footer>
+
+<body>
+
+    <script>
+        function MostraEscondeMenu() {
+            var nav = document.getElementById("navLinks");
+            if (nav.style.display === "flex") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "flex";
+            }
+        }
+    </script>
+    
+</body>
+</html>

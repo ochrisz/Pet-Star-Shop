@@ -1,0 +1,623 @@
+*{
+        padding: 0;
+        margin: 0;
+    }
+    @font-face {
+        font-family: "Roboto";
+        src: url('/font/Roboto-Regular.ttf');
+    }
+    body{
+        font-family: "Roboto";
+        src: url('/font/Roboto-Regular.ttf');
+        /* background-image: url(/imagens/background/foto2.png); */
+        background-color: #fff0e9;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .container {
+        font-family: "Roboto";
+        width: 80vw;
+        margin-left: auto; 
+        margin-right: auto;
+        padding-top: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 150px;
+
+    }
+
+           /*Css NavBar */
+        nav{
+            background-color: rgb(255, 89, 48);
+            display: flex;
+            width: 100vw;
+           
+        }
+        nav a {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            padding-top: 21px;
+            padding-bottom: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-decoration: none;
+        }
+        .link:hover{
+            color: rgb(255, 183, 155);
+
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: end;
+            
+        }
+
+        /* Imagem do logo */
+        .imglogo img{
+            width: 60px;
+            height: 60px;
+           /* position: fixed;*/
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        nav .ultimo-link{
+            margin-right: 10px;
+        }
+        nav .ultimo-link:hover{
+            color: rgb(2255, 157, 118);
+
+        }
+
+        /* Carousel */
+        .carousel{
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+        .slides{
+            display: flex;
+            transition: transform 0.9s ease;
+        }
+        .slide{
+            width: 100vw;
+           /* height: 100vh;*/
+            flex-shrink: 0;
+        }
+        .slide img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+        input[name="carousel"]{
+            display: none;
+        }
+        #slide1:checked ~ .slides{
+            transform: translateX(0vw);
+        }
+         #slide2:checked ~ .slides{
+            transform: translateX(-100vw);
+        }
+         #slide3:checked ~ .slides{
+            transform: translateX(-200vw);
+        }
+         #slide4:checked ~ .slides{
+            transform: translateX(-300vw);
+        }
+        .navegacao {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+           /* height: 320px;*/
+            text-align: center;
+        }
+        .navegacao label {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: rgba(255, 214, 198, 0.459);
+            border-radius: 40%;
+            margin: 0 7px;
+            cursor: pointer;
+            transition: background 0.3s;
+            border: solid 1px rgb(255, 0, 0);
+        }
+        input[name="carousel"]:checked + label {
+            background: white;
+        }
+
+        /* MENU SANDUÍCHE */
+
+        /* Ícone do menu sanduíche */
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+    /* Tamanho de tela para aparecer menu sanduíche*/
+
+
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                display: none; /* menu sanduiche começa escondido para ser mostrado apenas quando clicado */
+                align-items: normal;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(37, 7, 0, 0.5);
+                position: absolute;
+                top: 73px;
+                left: 0;
+                z-index: 999;
+             
+            }
+
+            .navbar a {
+                padding: 15px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .link:hover{
+             color: rgb(255, 115, 60);
+            }
+
+             nav .ultimo-link:hover{
+            color: rgb(255, 115, 60);
+
+        }
+
+
+            .menu-icon {
+                display: flex;
+                margin-left: auto;
+                padding-right: 15px;
+         
+            }
+
+            nav {
+                justify-content: space-between;
+                align-items: center;
+            }
+        } /* fim tamanho tela */
+
+        footer{
+        font-family:Arial;
+        font-size: small;
+        color:rgb(255, 255, 255);
+        background-color: rgba(31, 31, 31, 0.966);
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 100px;
+        }
+
+        /*Card Produto */
+
+    .content-cards-produto{
+    text-align: center;
+    }
+    .card-produto{
+        width: 200px;
+        height: 330px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        display: inline-block;
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, .2);
+        margin: 10px;
+        margin-top: 5px;
+        transition: all 0.9s;
+        
+    }
+    .card-produto:hover{
+        box-shadow: 4px 8px 20px rgba(0, 0, 0, 5);
+        cursor: pointer;
+        transition: all 0.3s; 
+    }
+    .card-produto img{
+        width: 200px;
+        height: 240px; 
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: px;
+        border-bottom: solid 1px rgb(224, 224, 224)
+        
+    }
+    .body-card-produto h3{
+        font-family: "Roboto";
+        font-size: 18px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 25ch;
+        margin: 5px;
+        
+    }
+    .body-card-produto label{
+        font-size: 16px;
+        color: rgb(221, 26, 26);
+        font-weight: bold;
+        margin: 5px;
+    }
+    .body-card-produto span{
+        color:rgb(179, 168, 168);
+        font-size: 14px;
+        margin: 5px;
+        text-decoration: line-through;
+
+    }
+     /* Botão comprar normal
+     .body-card-produto button{
+        width: 100%;
+        padding: 8px;
+        margin-top: 5%;
+        font-family: "Roboto";
+        font-weight: bold;
+        background-color: rgb(0, 89, 255);
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        border: none;
+    }
+        
+    .body-card-produto button:hover{
+        background-color: rgb(0, 74, 211);
+        cursor: pointer;
+    }
+        */
+
+    /* Botão com efeito 3D */
+    .body-card-produto button{
+        width: 100%;
+        background-color: rgb(0, 133, 7);
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 10px;
+        border: none;
+        box-shadow: 0px 5px 0px rgb(0, 90, 5)
+    }
+    .body-card-produto button:active{
+        position: relative;
+        top: 5px;
+        box-shadow: none;
+
+    }
+    .texto{
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: rgba(180, 160, 134, 0);
+
+    }
+   
+    /* Fim card produto */
+
+    /* Formulário */
+
+    .form{
+        background-color:rgb(255, 255, 255);
+        border: solid rgb(177, 177, 177) 1px;
+        border-radius: 15px;
+        width: 65%;
+        height: 70%;
+        justify-content: center;
+        margin: auto;
+        margin-top:35px;
+        color: rgb(214, 57, 0) ;
+        
+
+    }
+    .form-text {
+        margin-top: 40px;
+        font-size: 20px;
+        
+    }
+
+    .form-op {
+        margin-top: 10px;
+        margin-left:5%;
+        font-size:15px;
+    }
+    .vazio{
+        margin-top:30px;
+    }
+    
+  .button{
+        width: 100px;
+        background-color: rgb(0, 133, 7);
+        text-align: center;
+        color: white;
+        font-weight: 700;
+        padding: 5px;
+        border-radius: 10px;
+        border-color: rgba(255, 0, 0, 0);
+        margin-left:5%;
+        margin-bottom: 20px;
+    }
+    .button:active{
+        position: relative;
+        top: 5px;
+        box-shadow: none;
+  }
+
+ textarea{
+    font-family: roboto;
+ }
+.int{
+    width: 95%;
+    height: 30px;
+    font-size: 15px;
+}
+
+.int{
+    width: 95%;
+    height: 30px;
+    font-size: 15px;
+}
+.inti{
+    width: 95%;
+}
+/*
+.div-form-pai{
+    display: flex;
+}
+*/
+.cont-img{
+    margin-top: 50px;
+    width:500px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+}
+.cont-img img{
+    width:100%;
+    height:100%;
+    
+
+}
+/* fim formulário */
+.sob-text{
+    margin-top: 50px;
+    font-size: 40px;
+    color: white;
+}
+.sob-text3{
+    background-color: rgba(0, 174, 255, 0);
+    width: 60%;
+    height: 100%;
+    margin:auto;
+    margin-top: 20px;
+    font-family: "Roboto";
+    src: url('/font/Roboto-Light.ttf');
+    color: white;
+
+}
+.sob-text3 p{
+    font-size:1.3vw;
+    margin-bottom: 10%;
+    height: auto;
+
+}
+
+.sob-text2{
+    margin-top: 40px;
+
+}
+.sob-p1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /*
+    flex-wrap: wrap;
+    */
+    justify-content: center;
+    
+}
+.sob-img img{
+    width:750px;
+    height:100%;
+    margin: auto;
+
+}
+.sob-img{
+    width:750px;
+    height: 100%;
+    margin:auto;
+    width: 40%;
+}
+
+.sob-text3 {
+      font-size: 16px; /* Tamanho padrão */
+    }
+
+    @media (max-width: 768px) {
+      p {
+        font-size: 14px; /* Diminui o tamanho da fonte em telas menores */
+      }
+    }
+
+
+
+/* Página banho e tosa */
+
+    .content-cards-serviço{
+    text-align: center;
+    }
+    .card-serviço{
+        width: 400px;
+        height: 500px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        display: inline-block;
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, .2);
+        margin: 10px;
+        margin-top: 5px;
+        transition: all 0.9s;
+        border-radius: 15px;
+        
+    }
+    .card-serviço:hover{
+        box-shadow: 4px 8px 20px rgba(0, 0, 0, 5);
+        cursor: pointer;
+        transition: all 0.3s; 
+    }
+    .card-serviço img{
+        width: 400px;
+        height: 320px; 
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: px;
+        border-bottom: solid 1px rgb(224, 224, 224)
+        
+    }
+    .body-card-serviço h3{
+        font-size: 30px;
+        color: rgb(214, 57, 0) ;
+        margin-bottom: 5px;
+    }
+    .body-card-serviço h4{
+        font-size: 18px;
+    }
+
+        .body-card-serviço label{
+        font-size: 16px;
+        color: rgb(221, 26, 26);
+        font-weight: bold;
+        margin: 5px;
+    }
+    .body-card-serviço span{
+        color:rgb(179, 168, 168);
+        font-size: 14px;
+        margin: 5px;
+        text-decoration: line-through;
+
+    }
+     /* Botão comprar normal
+     .body-card-produto button{
+        width: 100%;
+        padding: 8px;
+        margin-top: 5%;
+        font-family: "Roboto";
+        font-weight: bold;
+        background-color: rgb(0, 89, 255);
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        border: none;
+    }
+        
+    .body-card-produto button:hover{
+        background-color: rgb(0, 74, 211);
+        cursor: pointer;
+    }
+        */
+
+    /* Botão com efeito 3D */
+    .body-card-serviço button{
+        width: 100%;
+        background-color: rgb(0, 133, 7);
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 10px;
+        border: none;
+        box-shadow: 0px 5px 0px rgb(0, 90, 5)
+    }
+    .body-card-serviço button:active{
+        position: relative;
+        top: 5px;
+        box-shadow: none;
+
+    }
+    .texto{
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: rgba(180, 160, 134, 0);
+
+    }
+
+      .t2 button{
+        width: 200px;
+        height: 50px;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        color: rgb(255, 72, 0);
+        font-weight: 700;
+        padding: 5px;
+        border-radius: 10px;
+        border-color: rgb(255, 72, 0);
+        margin-left:20%;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+       .container2 {
+        font-family: "Roboto";
+        width: 100vw;
+        margin-left: auto; 
+        margin-right: auto;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 5px;
+        background-color: rgb(255, 115, 65);
+
+    }
+     .form-text2 {
+        margin-top: 40px;
+        font-size: 20px;
+       background-color: rgb(255, 115, 65);
+       padding-top:2%;
+       margin-top: 0px;
+       color: white;
+    }
+      .container3 {
+        font-family: "Roboto";
+        width: 80vw;
+        margin-left: auto; 
+        margin-right: auto;
+        padding-top: 3%;
+        padding-left: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 5px;
+        border-radius: 10px;
+    
+      }
+
+       .container4 {
+        font-family: "Roboto";
+        width: 80vw;
+        margin-left: auto; 
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+
+    }

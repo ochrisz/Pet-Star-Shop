@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Star Shop</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<style> 
+   body{
+    background-color: rgb(29, 29, 29);
+   }
+   footer{
+    background-color: rgb(10, 10, 10);
+   }
+</style>
+
+
+<body>
+    <body>
+    <header>
+        <nav>
+                <div class="imglogo">
+                    <a href="index.html"> <img src="imagens/logo/logo4.png"></a>
+                    
+                </div>
+
+                <!--Add menu sanduíche-->
+                <div class="menu-icon" onclick="MostraEscondeMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class="navbar" id="navLinks"> <!--add id para o menu sanduiche-->
+                    <a href="index.html" class="link">Banho e tosa</a>
+                    <a href="produtos.html" class="link">Produtos</a>
+                    <a href="sobrenos.html" class="link ">Sobre nós</a>
+                    <a href="faleconosco.html" class="ultimo-link">Fale Conosco</a>
+                </div>
+        </nav>
+    </header>
+
+
+ <!-- Div pai 1-->
+  <div class="sob-p1">
+    <!-- Div Primeiro texto-->
+<div> 
+    <!-- Sobre nós-->
+<div class="sob-text"> 
+        <h2 align="center">Sobre nós</h2>                   
+        </div>
+<!-- fim sobre nos-->
+<div class="sob-text3">
+    <p>Nossa objetivo não é apenas vender produtos, lucrar com os serviços, é algo além. Nós criamos a Pet Star Shop para oferecer o melhor para seu pet, trata-los com carinho segurança e paixão, trazer lazer, diversão e cuida-los com alta qualidade. Queremos fortalecer laços, construir uma evolução para seu amiguinho. Nosso trabalho vai além de um pet shop, somos o grupo Pet Star, um grupo focado com os animais, tratamos eles em nosso pet shop, veterinário ou nossa casa de adoção.
+<br>
+<br>
+Começamos como um pequeno grupo de amigos, que desde que conhecemos, gostamos de brincar junto com os animais, sempre tivemos afinidade com eles. Cuidavamos dos animais da rua como se fosse nossos, seja ele de alguém ou não. Enxergamos que existem muitos animais abandonados, ou até mesmo adotados, porém que não recebiam muitos cuidados, seja por falta de empatia ou condição financeira. 
+
+<br>
+<br>
+Vimos uma necessisade, um propósito, cuidar dos animais, dos bichinhos de estimação.Contratamos e selecionamos as melhores pessoas que podem tratar dos animais, realizamos os serviços com o maior cuidado, com uma alta qualidade, fazendo o melhor. Objetivo da nossa empresa é claro, cuidar dos animais.</p>
+</div>
+
+</div>
+<!-- Fim div primeiro texto-->
+ <div class="sob-img">
+    <img src="imagens/logo/loja.png">
+</div>
+
+
+  </div>
+   <footer>
+        <p><h3>Pet Star Shop</h3></p>
+        <p><h3>&copy; 2025 Pet Star Group. O melhor lugar para seu bicinho</h2> 
+        <br>
+        <p> Horário de atendiemnto das 8:00 - 18:00</p>
+            <p>Rua Joaquin Carlos Coimbra 178 - Marília SP</p>
+      </footer>
+
+<body>
+
+    <script>
+        function MostraEscondeMenu() {
+            var nav = document.getElementById("navLinks");
+            if (nav.style.display === "flex") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "flex";
+            }
+        }
+    </script>
+    
+</body>
+</html>

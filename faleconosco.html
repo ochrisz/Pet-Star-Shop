@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Star</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<style> 
+   
+</style>
+
+
+<body>
+    <body>
+    <header>
+        <nav>
+                <div class="imglogo">
+                    <a href="index.html"> <img src="imagens/logo/logo4.png"></a>
+                    
+                </div>
+
+                <!--Add menu sanduíche-->
+                <div class="menu-icon" onclick="MostraEscondeMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class="navbar" id="navLinks"> <!--add id para o menu sanduiche-->
+                    <a href="index.html" class="link">Banho e tosa</a>
+                    <a href="produtos.html" class="link">Produtos</a>
+                    <a href="sobrenos.html" class="link ">Sobre nós</a>
+                    <a href="faleconosco.html" class="ultimo-link">Fale Conosco</a>
+                </div>
+        </nav>
+    </header>
+
+    
+    <!-- Fale conosco -->
+<div class="form-text"> 
+            <fontface="Bahnschrift SemiBold">
+                         <h2 align="center">Fale conosco</h2>
+                         <h4 align="center">Deixe uma sugestão, alguma dúvida ou contate nossos serviços</h4>
+        </div>
+<div class="div-form-pai">
+     
+<div class="form">
+    <fielset>
+       <div class="vazio">
+
+       </div >
+                    <div class="form-op">
+                        <label for="1bnome">Nome:<br></label>
+                        <input type="text" name="nome" id="ipt_nome"
+                        placeholder="Digite seu nome" size="50" class="int">
+
+                    </div>
+                    <div class="form-op">
+                        <label for="ibEmail">E-mail:<br></label>
+                        <input type="text" name="nome" id="ipt_e-mail"
+                        placeholder="Digite seu e-mail" size="50" class="int">
+
+                    </div>
+                    
+
+                    <div class="form-op">
+                        <label for="ibSenha">Telefone:<br></label>
+                        <input type="password" name="nome" id="ipt_senha"
+                        placeholder="Digite seu telefone" size="50" class="int">
+                        
+                    </div>
+
+                    <div class="form-op">
+                        <label for="ibendereço">Assunto:<br></label>
+                        <input type="text" name="nome" id="ipt_endereço"
+                        placeholder="Digite o assunto" size="50" class="int">
+                        
+                    </div>
+
+                
+
+                    <div class="form-op">
+                        <h4> Mensagem:</h4>
+                        <textarea rows="10" cols = "52" class="inti"></textarea>
+                        
+                    </div>
+                
+
+                    <br>
+                        <input type="submit" class="button">
+
+
+                    </fielset> 
+        </div>
+        <div class="cont-img">
+            <img src="imagens/slides/cachorro-olhando.png">
+        </div>
+</div>
+    
+
+                
+
+     <footer>
+        <p><h3>Pet Star Shop</h3></p>
+        <p><h3>&copy; 2025 Pet Star Group. O melhor lugar para seu bicinho</h2> 
+        <br>
+        <p> Horário de atendiemnto das 8:00 - 18:00</p>
+            <p>Rua Joaquin Carlos Coimbra 178 - Marília SP</p>
+      </footer>
+
+<body>
+
+    <script>
+        function MostraEscondeMenu() {
+            var nav = document.getElementById("navLinks");
+            if (nav.style.display === "flex") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "flex";
+            }
+        }
+    </script>
+    
+</body>
+</html>
